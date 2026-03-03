@@ -17,7 +17,7 @@
 
     <!-- Right side -->
     <div class="flex items-center gap-4">
-      <a href="#" class="nav-link">Login</a>
+      <a href="{{ route('login') }}" class="nav-link">Login</a>
       <a href="{{ route('register') }}" class="nav-link">Register</a>
     </div>
   </div>
