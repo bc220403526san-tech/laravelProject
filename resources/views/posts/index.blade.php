@@ -1,4 +1,11 @@
 <x-layout>
-    <h1 class="title">Hello, This is our home page.</h1>
+   
+    @auth
+        <h1 class=font-bold>Logged in</h1>
+    @endauth
+
+    @guest
+        <h1>guest</h1>
+    @endguest
    
 </x-layout>
