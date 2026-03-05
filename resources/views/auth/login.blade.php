@@ -26,15 +26,15 @@
                 @enderror
             </div>
 
-                @error('failed')
-                    <p class="error">{{ $message }}</p>
-                @enderror
 
             <!-- Remember Me Checkbox -->
             <div class="flex items-center">
-                <input type="checkbox" id="remember" name="remember" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                <label for="remember" class="ml-2 block text-gray-700">Remember Me</label>
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Me</label>
             </div>
+            @error('failed')
+                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+            @enderror
     
             <!-- Submit Button -->
             <button type="submit"

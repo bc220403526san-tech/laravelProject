@@ -36,12 +36,22 @@ class AuthController extends Controller
 
     // Try to login with the user.
     if(Auth::attempt($fields, $request->remember)){
-        return redirect()->route('home');
+        return redirect()->intended('dashboard');
     }else{
         return back()->withErrors([
             'failed' => 'The provided credentials do not match our record.'
         ]);
     }
 
+   }
+
+   //Logout
+   public function logout(Request $request){
+     Auth::logout();
+
+     $request->session()->invalidate();
+     $request->session()->regenerateToken();
+
+     return redirect('/');
    }
 }

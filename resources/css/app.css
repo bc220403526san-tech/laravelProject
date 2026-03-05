@@ -12,7 +12,7 @@
 
 @layer components {
   .nav-link {
-    @apply bg-slate-900 text-slate-100 px-3 py-1 rounded-lg 
+    @apply  text-slate-100 px-3 py-1 rounded-lg 
            hover:bg-slate-100 hover:text-slate-900;
   }
   .error {
@@ -21,4 +21,17 @@
   .border {
     @apply border border-red-600 rounded-md; 
   }
+  .error {
+    color: red;
+    font-size: 14px;
+}
+.round-btn {
+    @apply w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center hover:bg-blue-600;
+}
+.title{
+    @apply text-3xl font-bold;
+}
+.card {
+    @apply bg-white p-6 rounded-lg shadow-md w-120;
+}
 }
